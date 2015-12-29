@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="utf-8">
-		<title>Hello World Step 2 Walkthrough Bootstrap 29th Dec</title>
+		<title>Hello World Step 3 - Controls 29th Dec</title>
 		<script
          id="sap-ui-bootstrap"
          src="https://openui5beta.hana.ondemand.com/resources/sap-ui-core.js"
@@ -14,14 +14,15 @@
       </script>
       <script>
          sap.ui.getCore().attachInit(function () {
-             alert("UI5 is ready");
+        	 new sap.m.Text({
+                 text : "Hello World Step 3"
+              }).placeAt("content");
          });
       </script>
 	
 		
 
 	</head>
-	<body>
-	<p>Hello World 29th Dec 2015</p>
-	</body>
+	<body class="sapUiBody" id="content">
+   </body>
 </html>
