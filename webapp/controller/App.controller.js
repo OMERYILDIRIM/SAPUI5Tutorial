@@ -1,23 +1,27 @@
 sap.ui.define([
-   "sap/ui/core/mvc/Controller",
-   "sap/m/MessageToast",
-   "sap/ui/model/json/JSONModel"
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageToast",
+	"sap/ui/model/json/JSONModel"
 ], function (Controller, MessageToast, JSONModel) {
-   "use strict";
-   return Controller.extend("sap.ui.demo.wt.controller.App", {
-	   onInit : function () {
-	         // set data model on view
-	         var oData = {
-	            recipient : {
-	               name : "World"
-	            }
-	         };
-	         var oModel = new JSONModel(oData);
-	         this.getView().setModel(oModel);
-	      },
-	      onShowHello : function () {
-	          // show a SAPUI5 message alert - nicer looking
-	    	  MessageToast.show("Hello World Step 7");
-	       }
-	    });
+	"use strict";
+
+	return Controller.extend("sap.ui.demo.wt.controller.App", {
+
+		onInit : function () {
+			MessageToast.show("onInit function started");
+			// set data model on view
+			var oData = {
+				recipient : {
+					name : "World"
+				}
+			};
+			var oModel = new JSONModel(oData);
+			this.getView().setModel(oModel);
+		},
+
+		onShowHello : function () {
+			MessageToast.show("Hello World step 7");
+		}
+	});
+
 });
